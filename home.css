@@ -86,40 +86,41 @@ html,   body{
     transform: scale(1.5);
     transition-delay: 1s;
   }
-.heart {
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  background: var(--heart-color);
-  z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg); /* เอียงปกติ */
-  transition: transform 0.5s ease-in-out 1s;
-  box-shadow: 0 1px 6px var(--shadow-color);
-  cursor: pointer;
-}
-.heart:before, 
-.heart:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: var(--heart-color);
-  border-radius: 50%;
-}
-.heart:before {
-  top: -7.5px;
-}
-.heart:after {
-  right: 7.5px;
-}
-
-/* ตอนเปิดซอง: ไม่เอียง */
-.flap > .heart {
-  transform: translate(-50%, -20%) rotate(0deg);
-  transition-delay: 0.4s;
-}
+  .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg); /* เอียงปกติ */
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+  }
+  .heart:before, 
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+  }
+  .heart:before {
+    top: -7.5px;
+  }
+  .heart:after {
+    right: 7.5px;
+  }
+  
+  /* ตอนเปิดซอง: ไม่เอียง */
+  .flap > .heart {
+    transform: translate(-50%, -20%) rotate(0deg);
+    transition-delay: 0.4s;
+  }
+  
 
   .hearts-inside {
     position: absolute;
