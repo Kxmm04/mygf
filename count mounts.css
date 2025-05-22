@@ -7,3 +7,52 @@ html, body {
     background-color: #fbccd1; /* สีพื้นหลัง */
     font-family: 'Itim', cursive;
   }
+
+  .countdown-container {
+    background-color: #f5edd1;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    color: #444;
+    font-size: 20px;
+  }
+  
+  #countdown {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+  }
+
+  .back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Itim', cursive;
+    font-size: 16px;
+    background-color: #ff5895;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #e84a84;
+  }
+  
+  .next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Itim', cursive;
+    font-size: 16px;
+    background-color: #ff5895;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
