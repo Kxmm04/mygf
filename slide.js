@@ -64,4 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // เริ่มต้นแสดง slide แรกและถัดไป
     showSlide(current);
   });
-  
+  document.querySelector('.back-btn').addEventListener('click', () => {
+    window.history.back(); // หรือใส่ลิงก์ตรงก็ได้
+    });
