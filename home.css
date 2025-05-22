@@ -1,5 +1,4 @@
-
-:root{
+:root {
     --primary: #fff;
     --bg-color: #fbccd1;
     --bg-envelope-color: #f5edd1;
@@ -9,7 +8,8 @@
     --txt-color: #444;
     --heart-color: #ff5895;
   }
-html,   body{
+  
+  html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,21 +18,27 @@ html,   body{
     align-items: center;
     justify-content: center;
     font-family: 'Itim', cursive;
-  }
-  .container {
     height: 100vh;
+  }
+  
+  .container {
+    position: relative;
     display: grid;
     place-items: center;
   }
-  .container > .envelope-wrapper {
+  
+  .envelope-wrapper {
     background: var(--bg-envelope-color);
     box-shadow: 0 0 30px var(--shadow-color);
+    cursor: pointer;
   }
+  
   .envelope-wrapper > .envelope {
     position: relative;
     width: 300px;
     height: 230px;
   }
+  
   .envelope-wrapper > .envelope::before {
     content: "";
     position: absolute;
@@ -44,6 +50,7 @@ html,   body{
     transform-origin: top;
     transition: all 0.5s ease-in-out 0.7s;
   }
+  
   .envelope-wrapper > .envelope::after {
     content: "";
     position: absolute;
@@ -55,6 +62,7 @@ html,   body{
     border-bottom: 106px solid var(--envelope-cover);
     border-left: 150px solid var(--envelope-cover);
   }
+  
   .envelope > .letter {
     position: absolute;
     right: 20%;
@@ -70,22 +78,24 @@ html,   body{
   }
   
   .envelope > .letter > .text {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--txt-color);
     text-align: left;
     font-size: 10px;
     font-family: 'Itim', cursive;
   }
   
-  .flap > .envelope:before {
+  /* ตอนเปิดซอง */
+  .flap > .envelope::before {
     transform: rotateX(180deg);
     z-index: 0;
   }
+  
   .flap > .envelope > .letter {
     bottom: 100px;
     transform: scale(1.5);
     transition-delay: 1s;
   }
+  
   .heart {
     position: absolute;
     top: 50%;
@@ -94,12 +104,13 @@ html,   body{
     height: 15px;
     background: var(--heart-color);
     z-index: 4;
-    transform: translate(-50%, -20%) rotate(45deg); /* เอียงปกติ */
+    transform: translate(-50%, -20%) rotate(45deg);
     transition: transform 0.5s ease-in-out 1s;
     box-shadow: 0 1px 6px var(--shadow-color);
     cursor: pointer;
   }
-  .heart:before, 
+  
+  .heart:before,
   .heart:after {
     content: "";
     position: absolute;
@@ -108,20 +119,21 @@ html,   body{
     background-color: var(--heart-color);
     border-radius: 50%;
   }
+  
   .heart:before {
     top: -7.5px;
   }
+  
   .heart:after {
     right: 7.5px;
   }
   
-  /* ตอนเปิดซอง: ไม่เอียง */
+  /* ตอนเปิดซอง: หัวใจไม่เอียง */
   .flap > .heart {
     transform: translate(-50%, -20%) rotate(0deg);
     transition-delay: 0.4s;
   }
   
-
   .hearts-inside {
     position: absolute;
     bottom: 10px;
@@ -181,18 +193,48 @@ html,   body{
   .flap .heart-inside:nth-child(1) {
     animation-delay: 0.2s;
   }
+  
   .flap .heart-inside:nth-child(2) {
     animation-delay: 0.4s;
   }
+  
   .flap .heart-inside:nth-child(3) {
     animation-delay: 0.6s;
   }
+  
   .flap .heart-inside:nth-child(4) {
     animation-delay: 0.8s;
   }
+  
   .flap .heart-inside:nth-child(5) {
     animation-delay: 1s;
   }
   
+  /* ปุ่มถัดไป - ซ่อนก่อนเปิดซอง */
+  .next-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    font-family: 'Itim', cursive;
+    background-color: var(--heart-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
   
+  /* แสดงปุ่มตอนเปิดซอง */
+  .flap + .next-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 1.5s;
+  }
   
