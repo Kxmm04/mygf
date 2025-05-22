@@ -87,4 +87,10 @@ html, body {
   .back-btn:hover {
     background-color: #e84a84;
   }
-  
+  @media (max-width: 600px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      max-width: 100%;
+    }
+  }
