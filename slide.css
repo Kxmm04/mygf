@@ -16,7 +16,7 @@ html, body {
   .slider {
     position: relative;
     width: 80%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -31,8 +31,8 @@ html, body {
   /* Slide แต่ละอันถูกจัดให้อยู่ในตำแหน่ง absolute */
   .slide {
     position: absolute;
-    top: 60%;
-    left: 65%;
+    top: 80%;
+    left: 60%;
     width: 75%;
     /* เริ่มต้นซ่อน slide ด้วย opacity 0 และหมุนเล็กน้อย */
     opacity: 0;
@@ -62,7 +62,7 @@ html, body {
   /* รูปภาพในแต่ละ slide: ปรับให้พอดีกรอบด้วย object-fit และตกแต่งในสไตล์ Polaroid */
   .slide img.image {
     display: block;
-    width:60%;
+    width:75%;
     height: 100%;
     object-fit: cover;
     border: 10px solid #fff;
@@ -71,7 +71,7 @@ html, body {
   
   .back-btn {
     display: block;
-    margin: 50px auto 0; /* 20px top, auto ซ้าย-ขวา (กลาง), 0 bottom */
+    margin: 200px auto 0; /* 20px top, auto ซ้าย-ขวา (กลาง), 0 bottom */
     padding: 10px 20px;
     font-family: 'Itim', cursive;
     font-size: 16px;
@@ -88,19 +88,3 @@ html, body {
     background-color: #e84a84;
   }
   
-  @media (max-width: 600px) {
-    .card-grid {
-      grid-template-columns: 1fr;
-      gap: 15px;
-      max-width: 100%;
-    }
-  
-    .card {
-      height: auto; /* ให้สูงตามเนื้อหา */
-      padding: 15px;
-    }
-  
-    .card h2 {
-      font-size: 18px;
-    }
-  }
