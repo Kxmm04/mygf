@@ -48,15 +48,16 @@ html, body {
   
   
   audio {
-    width: 21vw; /* กว้างเกือบเต็มหน้าจอ */
-    max-width: 1000px; /* จำกัดความกว้างสูงสุด */
+    width: 100%;
+    max-width: 100%;
     margin: 30px auto 0;
     display: block;
     background-color: #ffe6ef;
     border-radius: 16px;
-    padding: 12px;
+    padding: 0;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
+  
   
 
   
