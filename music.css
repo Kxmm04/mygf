@@ -58,17 +58,7 @@ html, body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   }
   
-  /* สำหรับเบราว์เซอร์ที่รองรับ WebKit (Chrome, Safari, Edge) */
-  audio::-webkit-media-controls-panel {
-    background-color: #ffe6ef;
-    border-radius: 16px;
-  }
-  
-  audio::-webkit-media-controls-play-button,
-  audio::-webkit-media-controls-volume-slider,
-  audio::-webkit-media-controls-timeline {
-    filter: hue-rotate(330deg) brightness(1.1);
-  }
+
   
   
   .back-btn {

@@ -31,8 +31,8 @@ html, body {
   /* Slide แต่ละอันถูกจัดให้อยู่ในตำแหน่ง absolute */
   .slide {
     position: absolute;
-    top: 55%;
-    left: 70%;
+    top: 60%;
+    left: 65%;
     width: 75%;
     /* เริ่มต้นซ่อน slide ด้วย opacity 0 และหมุนเล็กน้อย */
     opacity: 0;
@@ -62,7 +62,7 @@ html, body {
   /* รูปภาพในแต่ละ slide: ปรับให้พอดีกรอบด้วย object-fit และตกแต่งในสไตล์ Polaroid */
   .slide img.image {
     display: block;
-    width:50%;
+    width:60%;
     height: 100%;
     object-fit: cover;
     border: 10px solid #fff;
@@ -71,7 +71,7 @@ html, body {
   
   .back-btn {
     display: block;
-    margin: 20px auto 0; /* 20px top, auto ซ้าย-ขวา (กลาง), 0 bottom */
+    margin: 50px auto 0; /* 20px top, auto ซ้าย-ขวา (กลาง), 0 bottom */
     padding: 10px 20px;
     font-family: 'Itim', cursive;
     font-size: 16px;
