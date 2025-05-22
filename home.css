@@ -102,7 +102,7 @@
   
   .heart {
     position: absolute;
-    top: 52%;
+    top: 54%;
     left: 50%;
     width: 15px;
     height: 15px;
@@ -114,105 +114,34 @@
     cursor: pointer;
   }
   
-  .heart:before,
-  .heart:after {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: var(--heart-color);
-    border-radius: 50%;
-  }
-  
-  .heart:before {
-    top: -7.5px;
-  }
-  
-  .heart:after {
-    right: 7.5px;
-  }
-  
-  /* ตอนเปิดซอง: หัวใจไม่เอียง */
-  .flap > .heart {
-    transform: translate(-50%, -20%) rotate(0deg);
-    transition-delay: 0.4s;
-  }
-  
-  .hearts-inside {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 1;
-    pointer-events: none;
-  }
-  
-  .heart-inside {
-    width: 14px;
-    height: 14px;
-    background: var(--heart-color);
-    position: relative;
-    opacity: 0;
-  }
-  
-  .heart-inside::before,
-  .heart-inside::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: var(--heart-color);
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-  }
-  
-  .heart-inside::before {
-    top: -7px;
-  }
-  
-  .heart-inside::after {
-    left: 7px;
-  }
-  
-  @keyframes floatHeart {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100px);
-      opacity: 0;
-    }
-  }
-  
-  /* แสดงตอนเปิดซอง */
-  .flap .heart-inside {
-    animation: floatHeart 1.5s ease forwards;
-  }
-  
-  /* กำหนด delay ให้แต่ละดวง */
-  .flap .heart-inside:nth-child(1) {
-    animation-delay: 0.2s;
-  }
-  
-  .flap .heart-inside:nth-child(2) {
-    animation-delay: 0.4s;
-  }
-  
-  .flap .heart-inside:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  .flap .heart-inside:nth-child(4) {
-    animation-delay: 0.8s;
-  }
-  
-  .flap .heart-inside:nth-child(5) {
-    animation-delay: 1s;
-  }
+  .heart:before, 
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+.heart:before {
+  top: -7.5px;
+}
+.heart:after {
+  right: 7.5px;
+}
+.flap > .envelope:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.flap > .envelope > .letter {
+  bottom: 100px;
+  transform: scale(1.5);
+  transition-delay: 1s;
+}
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
   
   /* ปุ่มถัดไป - ซ่อนก่อนเปิดซอง */
   .next-btn {
