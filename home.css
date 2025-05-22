@@ -20,7 +20,11 @@
     font-family: 'Itim', cursive;
     height: 100vh;
   }
-  
+  .textdate {
+    text-align: right;
+    font-size: 8px;
+  }
+
   .container {
     position: relative;
     display: grid;
