@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ffe4ec;
+    font-family: 'Itim', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .player-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 24px;
+    background: #fff0f5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 340px;
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #ff4d88;
+    margin-bottom: 20px;
+  }
+  
+  .vinyl-wrapper {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden; /* บังคับให้รูปไม่เกินวงกลม */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  .disc {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: spin 6s linear infinite;
+    animation-play-state: paused;
+    display: block;
+  }
+  
+  
+  audio {
+    width: 21vw; /* กว้างเกือบเต็มหน้าจอ */
+    max-width: 600px; /* จำกัดความกว้างสูงสุด */
+    margin: 30px auto 0;
+    display: block;
+    background-color: #ffe6ef;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* สำหรับเบราว์เซอร์ที่รองรับ WebKit (Chrome, Safari, Edge) */
+  audio::-webkit-media-controls-panel {
+    background-color: #ffe6ef;
+    border-radius: 16px;
+  }
+  
+  audio::-webkit-media-controls-play-button,
+  audio::-webkit-media-controls-volume-slider,
+  audio::-webkit-media-controls-timeline {
+    filter: hue-rotate(330deg) brightness(1.1);
+  }
+  
+  
+  .back-btn {
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    background-color: #ff6fa1;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #e84a84;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
