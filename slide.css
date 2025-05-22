@@ -88,3 +88,19 @@ html, body {
     background-color: #e84a84;
   }
   
+  @media (max-width: 600px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      max-width: 100%;
+    }
+  
+    .card {
+      height: auto; /* ให้สูงตามเนื้อหา */
+      padding: 15px;
+    }
+  
+    .card h2 {
+      font-size: 18px;
+    }
+  }
