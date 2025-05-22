@@ -21,7 +21,7 @@
     height: 100vh;
   }
   .textdate {
-    text-align: right;
+   padding-left: 75%;
     font-size: 8px;
   }
 
