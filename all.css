@@ -1,35 +1,38 @@
 html, body {
   margin: 0;
   height: 100%;
+  background-color: #fbccd1;
+  font-family: 'Itim', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fbccd1; /* สีพื้นหลัง */
-  font-family: 'Itim', cursive;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* link ถ้าใช้ */
-.link {
-  text-decoration: none;
-}
-
-/* Grid 2 คอลัมน์บนจอใหญ่ */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
-/* Card รูปแบบเดิม */
+.link {
+  text-decoration: none;
+}
+
 .card {
   background-color: #fff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 250px;
   height: 160px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -41,33 +44,23 @@ html, body {
   margin: 0;
   font-size: 20px;
   color: #e84a84;
+  text-align: center;
 }
 
-.card p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #444;
-}
-
-/* --- ปรับ layout สำหรับหน้าจอเล็ก (มือถือ) --- */
-@media (max-width: 480px) {
+/* ปรับให้รองรับมือถือ */
+@media (max-width: 600px) {
   .card-grid {
-    grid-template-columns: 1fr; /* เปลี่ยนเป็นคอลัมน์เดียว */
-    width: 90vw; /* ให้กว้างประมาณ 90% ของ viewport */
+    grid-template-columns: 1fr;
     gap: 15px;
+    max-width: 100%;
   }
 
   .card {
-    width: 100%; /* เต็มความกว้าง container */
-    height: auto; /* ความสูงปรับอัตโนมัติ */
+    height: auto; /* ให้สูงตามเนื้อหา */
     padding: 15px;
   }
 
   .card h2 {
     font-size: 18px;
-  }
-
-  .card p {
-    font-size: 14px;
   }
 }
