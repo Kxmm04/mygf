@@ -9,6 +9,10 @@ html, body {
     overflow: hidden;
   }
   
+  h1{
+    text-align: center;
+  }
+
   .slider {
     position: relative;
     width: 80%;

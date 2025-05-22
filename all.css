@@ -1,47 +1,73 @@
 html, body {
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fbccd1; /* สีพื้นหลัง */
-    font-family: 'Itim', cursive;
-  }
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbccd1; /* สีพื้นหลัง */
+  font-family: 'Itim', cursive;
+}
 
-  .link {
-    text-decoration: none;
-  }
+/* link ถ้าใช้ */
+.link {
+  text-decoration: none;
+}
 
+/* Grid 2 คอลัมน์บนจอใหญ่ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Card รูปแบบเดิม */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  height: 160px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #e84a84;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* --- ปรับ layout สำหรับหน้าจอเล็ก (มือถือ) --- */
+@media (max-width: 480px) {
   .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr; /* เปลี่ยนเป็นคอลัมน์เดียว */
+    width: 90vw; /* ให้กว้างประมาณ 90% ของ viewport */
+    gap: 15px;
   }
-  
+
   .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 250px;
-    height: 160px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    width: 100%; /* เต็มความกว้าง container */
+    height: auto; /* ความสูงปรับอัตโนมัติ */
+    padding: 15px;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-  }
-  
+
   .card h2 {
-    margin: 0;
-    font-size: 20px;
-    color: #e84a84;
+    font-size: 18px;
   }
-  
+
   .card p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #444;
+    font-size: 14px;
   }
+}
