@@ -34,7 +34,5 @@ function updateCountdown() {
   document.querySelector('.back-btn').addEventListener('click', () => {
     window.history.back(); // หรือใส่ลิงก์ตรงก็ได้
     });
-    nextBtn.addEventListener('click', () => {
-        window.location.href = "count mounts.html"; // เปลี่ยนลิงก์ตามต้องการ
-  });
+   
   

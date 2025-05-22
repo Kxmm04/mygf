@@ -102,7 +102,7 @@
   
   .heart {
     position: absolute;
-    top: 54%;
+    top: 43%;
     left: 50%;
     width: 15px;
     height: 15px;
@@ -142,32 +142,22 @@
   transform: rotate(90deg);
   transition-delay: 0.4s;
 }
-  
-  /* ปุ่มถัดไป - ซ่อนก่อนเปิดซอง */
-  .next-btn {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 8px 16px;
-    font-family: 'Itim', cursive;
-    background-color: var(--heart-color);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 10;
-  }
-  
-  /* แสดงปุ่มตอนเปิดซอง */
-  .flap + .next-btn {
-    opacity: 1;
-    pointer-events: auto;
-    transition-delay: 1.5s;
-  }
+
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Itim', cursive;
+  font-size: 16px;
+  background-color: #ff5895;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #e84a84;
+}
   

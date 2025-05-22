@@ -16,6 +16,8 @@ envelope.addEventListener('click', () => {
   }
 });
 
-nextBtn.addEventListener('click', () => {
-  window.location.href = "count mounts.html"; // เปลี่ยนลิงก์ตามต้องการ
-});
+    // ปุ่มย้อนกลับ
+    document.querySelector('.back-btn').addEventListener('click', () => {
+      window.history.back(); // หรือใส่ลิงก์ตรงก็ได้
+      });
+
