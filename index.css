@@ -143,7 +143,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* ระยะห่างระหว่างรูปกับฟอร์ม */
+  gap: 0px; /* ระยะห่างระหว่างรูปกับฟอร์ม */
   max-width: 900px;
   width: 100%;
   margin: auto;
@@ -160,11 +160,13 @@ html, body {
 
 /* รูปปรับขนาดเต็มช่องซ้าย */
 .cover-image {
-  max-width: 60%;
+  max-width: 280px;  /* กำหนดความกว้างสูงสุด */
+  width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 /* ช่องขวาสำหรับฟอร์ม */
 .right-side {
