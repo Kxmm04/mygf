@@ -9,6 +9,17 @@ html, body {
     font-family: 'Itim', cursive;
   }
   
+.cover-image {
+  width: 30%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
+  height: auto;           /* รักษาสัดส่วนของรูป */
+  display: block;
+  margin:  10px;    /* จัดกลางและเพิ่มระยะห่างจากฟอร์มด้านล่าง */
+  border-radius: 12px;    /* ขอบมนแบบน่ารัก */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงานิดๆ */
+}
+
+
+
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
   #checkForm {
     background-color: #fff;
