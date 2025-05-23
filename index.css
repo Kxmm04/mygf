@@ -23,7 +23,7 @@ html, body {
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
   #checkForm {
     background-color: #fff;
-    padding: 60px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
