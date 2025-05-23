@@ -11,23 +11,18 @@
   <script src="index.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div class="left-side">
-      <img class="cover-image" src="images/0.JPEG" alt="cover">
+  <img class="cover-image" src="images/0.JPEG" alt="cover">
+
+  <form id="checkForm" action="all.html" method="get">
+    <div class="form-group">
+      <label for="apassword">วันครบรอบวันไหนน้าาา</label>
+      <input type="text" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" required
+        oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" oninput="this.setCustomValidity('')" maxlength="2" minlength="1">
     </div>
-    <div class="right-side">
-      <form id="checkForm" action="all.html" method="get">
-        <div class="form-group">
-          <label for="apassword">วันครบรอบวันไหนน้าาา</label>
-          <input type="text" id="apassword" name="apassword" placeholder="วันครบรอบนะอ้วง" required
-            oninvalid="this.setCustomValidity('กรอกตรงนี้ก่อนนอ้วงง')" oninput="this.setCustomValidity('')" maxlength="2" minlength="1">
-        </div>
-        <div class="form-group">
-          <input type="submit" value="กดเยยย">
-        </div>
-      </form>
+    <div class="form-group">
+      <input type="submit" value="กดเยยย">
     </div>
-  </div>
+  </form>
 
   <!-- Modal สำหรับแจ้งเตือน -->
   <div id="errorModal" class="modal">
@@ -38,5 +33,4 @@
     </div>
   </div>
 </body>
-
 </html>

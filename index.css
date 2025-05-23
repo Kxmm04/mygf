@@ -9,8 +9,14 @@ html, body {
     font-family: 'Itim', cursive;
   }
   
-
-
+.cover-image {
+  width: 20%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
+  height: auto;           /* รักษาสัดส่วนของรูป */
+  display: block;
+  margin:  10px;    /* จัดกลางและเพิ่มระยะห่างจากฟอร์มด้านล่าง */
+  border-radius: 12px;    /* ขอบมนแบบน่ารัก */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงานิดๆ */
+}
 
 
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
@@ -20,8 +26,8 @@ html, body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
-    width: 100%;
+    max-width: 500px;
+    width: 50%;
     font-family: 'Itim', cursive;
   }
   
@@ -138,56 +144,3 @@ html, body {
       color: #ff8da1;
       text-decoration: none;
     }
-/* Container แถวเดียวแบ่งซ้าย-ขวา */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0px; /* ระยะห่างระหว่างรูปกับฟอร์ม */
-  max-width: 900px;
-  width: 100%;
-  margin: auto;
-  flex-wrap: wrap; /* ให้เลื่อนลงแถวใหม่บนจอเล็ก */
-}
-
-/* ช่องซ้ายใส่รูป */
-.left-side {
-  flex: 1 1 200px; /* กินพื้นที่ขั้นต่ำ 300px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* รูปปรับขนาดเต็มช่องซ้าย */
-.cover-image {
-  max-width: 280px;  /* กำหนดความกว้างสูงสุด */
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-
-/* ช่องขวาสำหรับฟอร์ม */
-.right-side {
-  flex: 1 1 400px; /* กินพื้นที่ขั้นต่ำ 300px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ปรับขนาด input ในฟอร์มให้เต็มความกว้างที่เหมาะสม */
-#checkForm input[type="text"] {
-  width: 70%;
-}
-
-/* Responsive เล็ก ๆ สำหรับมือถือ */
-@media (max-width: 700px) {
-  .container {
-    flex-direction: column;
-    gap: 20px;
-  }
-  #checkForm input[type="text"] {
-    width: 90%;
-  }
-}
