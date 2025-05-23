@@ -8,26 +8,19 @@ html, body {
     background-color: #ffe4ec;/* สีพื้นหลัง */
     font-family: 'Itim', cursive;
   }
-  
-.cover-image {
-  width: 50%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
-  height: auto;           /* รักษาสัดส่วนของรูป */
-  display: block;
-  margin:  10px;    /* จัดกลางและเพิ่มระยะห่างจากฟอร์มด้านล่าง */
-  border-radius: 12px;    /* ขอบมนแบบน่ารัก */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงานิดๆ */
-}
+
+
 
 
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
   #checkForm {
     background-color: #fff;
-    padding: 25px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 500px;
-    width: 50%;
+    width: 90%;
     font-family: 'Itim', cursive;
   }
   
