@@ -10,7 +10,7 @@ html, body {
   }
   
 .cover-image {
-  width: 35%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
+  width: 32%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
   height: auto;           /* รักษาสัดส่วนของรูป */
   display: block;
   margin:  10px;    /* จัดกลางและเพิ่มระยะห่างจากฟอร์มด้านล่าง */
@@ -23,7 +23,7 @@ html, body {
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
   #checkForm {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -50,7 +50,7 @@ html, body {
   /* ปรับสไตล์สำหรับ input ที่เป็นข้อความให้ใหญ่ขึ้น */
   #checkForm input[type="text"] {
     text-align: center;
-    width: 60%;
+    width: 70%;
     padding: 12px;               /* เพิ่ม padding ให้ใหญ่ขึ้น */
     border: 2px solid #ffb6c1;
     border-radius: 8px;
@@ -145,4 +145,11 @@ html, body {
       color: #ff8da1;
       text-decoration: none;
     }
-    
+    @media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+}
