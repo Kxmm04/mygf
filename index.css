@@ -10,7 +10,7 @@ html, body {
   }
   
 .cover-image {
-  width: 30%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
+  width: 25%;             /* ให้เท่ากับ input (ที่กำหนดไว้ว่า 60%) */
   height: auto;           /* รักษาสัดส่วนของรูป */
   display: block;
   margin:  10px;    /* จัดกลางและเพิ่มระยะห่างจากฟอร์มด้านล่าง */
@@ -23,7 +23,7 @@ html, body {
   /* ตัวอย่างการปรับสไตล์ของฟอร์ม */
   #checkForm {
     background-color: #fff;
-    padding: 70px;
+    padding: 60px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
