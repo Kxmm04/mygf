@@ -138,3 +138,54 @@ html, body {
       color: #ff8da1;
       text-decoration: none;
     }
+/* Container แถวเดียวแบ่งซ้าย-ขวา */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* ระยะห่างระหว่างรูปกับฟอร์ม */
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap; /* ให้เลื่อนลงแถวใหม่บนจอเล็ก */
+}
+
+/* ช่องซ้ายใส่รูป */
+.left-side {
+  flex: 1 1 200px; /* กินพื้นที่ขั้นต่ำ 300px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* รูปปรับขนาดเต็มช่องซ้าย */
+.cover-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ช่องขวาสำหรับฟอร์ม */
+.right-side {
+  flex: 1 1 400px; /* กินพื้นที่ขั้นต่ำ 300px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ปรับขนาด input ในฟอร์มให้เต็มความกว้างที่เหมาะสม */
+#checkForm input[type="text"] {
+  width: 70%;
+}
+
+/* Responsive เล็ก ๆ สำหรับมือถือ */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #checkForm input[type="text"] {
+    width: 90%;
+  }
+}
